@@ -1,0 +1,127 @@
+.row {
+  width: 720px;
+  /* 디브 태그 간의 높이를 같게 한다 (폭도 같이 하고 싶으면 flex:1 추가하기) */
+  display: inline-flex;
+  flex: 1;
+}
+
+/* 캘린더 옆 컨트롤용 테이블 */
+.info {
+  width: 160px;
+  background-color: #DBBE9F;
+  color: #6A8DAB;
+  border-collapse: collapse;
+}
+
+/* 컨트롤러 */
+td.control {
+  height: 140px;
+  border: 1px solid white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 캘린더 테이블 속성 */
+.cal_table {
+  width: 560px;
+  border: 1px solid white;
+  background-color: #DBBE9F;
+  border-collapse: collapse;
+  text-align: center;
+  color: white;
+}
+
+/* 캘린더 내부 기본 td, th */
+th,
+td {
+  border: 1px solid white;
+  width: 80px;
+  /* height: 80px; */
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*달력 부분 상단 요일 줄*/
+.days {
+  display: flex;
+  height: 100px;
+  /* margin: 25px 0 10px; */
+}
+
+/*달력 부분 하단 날짜들*/
+.dates {
+  display: flex;
+  flex-flow: row wrap;
+  height: 560px;
+
+  /* border-top: 1px solid #333333;
+  border-right: 1px solid #333333; */
+}
+
+.date {
+  border: 1px solid white;
+  width: 80px;
+  /* height: 80px; */
+  text-align: middle;
+}
+
+/* 요일별 속성들 */
+/*일요일*/
+th:nth-child(7n + 1),
+.day:nth-child(7n + 1),
+.date:nth-child(7n + 1) {
+  color: #B75F5F;
+}
+
+/*토요일*/
+th:nth-child(7n),
+.day:nth-child(7n),
+.date:nth-child(7n) {
+  color: #6A8DAB;
+}
+
+/* 오늘날짜 표기 */
+.today {
+  color: #353535;
+  text-align: center;
+  text-decoration: underline;
+  /* position: relative; */
+}
+
+/*오늘날짜 표기. 가상 요소 넣기*/
+.today:before {
+  position: absolute;
+  transform: translate(55px, 20px);
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #B75F5F;
+  border-radius: 50%;
+  content: '';
+}
+
+/* 지난 달, 다음 달 */
+.other {
+  opacity: 0.3;
+}
+
+/* 해당 월, 연도 폰트 */
+h1.thismonth {
+  margin-top: 0em;
+}
+
+h3.thisyear {
+  margin-bottom: 0em;
+  text-decoration: underline;
+}
+
+.nav-btn {
+  /* width: 28px;
+  height: 30px; */
+  border: none;
+  font-size: 16px;
+  /* line-height: 34px; */
+  background-color: transparent;
+  cursor: pointer;
+  color: #6A8DAB;
+}

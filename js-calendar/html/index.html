@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>javascript로 달력 만들기</title>
+</head>
+
+<body>
+    <div class="row">
+        <table class="info">
+            <tr>
+                <td class="control">
+                    <h3 class="year thisyear"></h3>
+                    <h1 class="month thismonth"></h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="control">
+                    <h2>Month<br>
+                        <button class="nav-btn go-prev" onclick="prevMonth()">◀</button>
+                        <button class="nav-btn go-next" onclick="nextMonth()">▶</button>
+                    </h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="control">
+                    <h2>Year<br>
+                        <button class="nav-btn go-prev-year" onclick="prevYear()">◀◀</button>
+                        <button class="nav-btn go-next-year" onclick="nextYear()">▶▶</button>
+                    </h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="control">
+                    <button class="nav-btn go-today" onclick="goToday()">
+                        <h2>go to<br>TODAY</h2>
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+        <table class="cal_table">
+
+            <tr class="days">
+                <th>
+                    <h1>S</h1>
+                </th>
+                <th>
+                    <h1>M</h1>
+                </th>
+                <th>
+                    <h1>T</h1>
+                </th>
+                <th>
+                    <h1>W</h1>
+                </th>
+                <th>
+                    <h1>T</h1>
+                </th>
+                <th>
+                    <h1>F</h1>
+                </th>
+                <th>
+                    <h1>S</h1>
+                </th>
+            </tr>
+            <tr class="dates"></tr>
+
+        </table>
+    </div>
+    <script type="text/javascript" src="../js/calendar.js"></script>
+</body>
+
+</html>
